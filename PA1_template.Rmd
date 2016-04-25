@@ -52,7 +52,7 @@ sum(is.na(activity$steps))
 fillin <- function(x) {
 for (i in 1:length(x[,1])) 
         {
-        if (is.na(x[i,1]))
+        if (is.na(x[i,1])==TRUE)
                 y=subset(x[,1],x[,3]==x[i,3])
                 x[i,1]=mean(y[!is.na(y)])
         }
