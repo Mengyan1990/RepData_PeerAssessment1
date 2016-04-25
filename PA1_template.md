@@ -83,9 +83,10 @@ sum(is.na(activity$steps))
 fillin <- function(x) {
 for (i in 1:length(x[,1])) 
         {
-        if (is.na(x[i,1])==TRUE)
+        if (is.na(x[i,1])){
                 y=subset(x[,1],x[,3]==x[i,3])
                 x[i,1]=mean(y[!is.na(y)])
+        }
         }
 return(x) }
 activitynew <- fillin(activity)
@@ -100,7 +101,7 @@ mean(totalnew$steps)
 ```
 
 ```
-## [1] 961.0251
+## [1] 10766.19
 ```
 
 ```r
@@ -108,7 +109,7 @@ median(totalnew$steps)
 ```
 
 ```
-## [1] 344.1509
+## [1] 10766.19
 ```
 
 ## Are there differences in activity patterns between weekdays and weekends?
