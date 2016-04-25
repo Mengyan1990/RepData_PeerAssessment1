@@ -8,7 +8,7 @@
 
 
 ```r
-activity <- read.csv("/Users/gongmengyan/Google Drive/Data Science/Data Science Specialization/5. Reproducible Research/Assignment/activity.csv")
+activity <- read.csv("/Users/gongmengyan/Google Drive/Data Science/Data Science Specialization/5. Reproducible Research/Homework/activity.csv")
 activity$date <- as.POSIXct(as.character(activity$date),format="%Y-%m-%d")
 ```
 
